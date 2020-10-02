@@ -4,30 +4,35 @@
 <head>
   <meta charset="utf-8">
   <title>Simon</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <h1 id="level-title">Press A Key to Start</h1>
+  <h1 class="simon">Simon Game by Raunak</h1>
+  <h1 id="level-title">You have to match randomly generated colour sequence</h1>
   <div class="container">
     <div lass="row">
 
-      <div type="button" id="green" class="btn green">
+      <div type="button" id="green" class="btn colors green">
 
       </div>
 
-      <div type="button" id="red" class="btn red">
+      <div type="button" id="red" class="btn colors red">
 
       </div>
     </div>
+    <button type="button" name="button" class= "btn start"><strong>START</strong></button>
 
     <div class="row">
 
-      <div type="button" id="yellow" class="btn yellow">
+      <div type="button" id="yellow" class="btn colors yellow">
 
       </div>
-      <div type="button" id="blue" class="btn blue">
+      <div type="button" id="blue" class="btn colors blue">
 
       </div>
 
@@ -36,6 +41,7 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="game.js" charset="utf-8"></script>
 
 </body>

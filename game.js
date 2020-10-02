@@ -7,16 +7,43 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
+$(document).keydown(function(e){
+    if(e.which==32 ||e.which==13) e.preventDefault();
+});
 $(document).keypress(function() {
   if (!started) {
-    $("#level-title").text("Level " + level);
-    nextSequence();
+    $('#level-title').fadeOut(1000, function()
+    {
+        $(this).html("level " +level).fadeIn(1000);
+    });
+    setTimeout(function () {
+      nextSequence();
+    }, 1200);
     started = true;
   }
 });
 
-$(".btn").click(function() {
+$('.start').click(function() {
+  $(".start").animate({
+    left: '-=500px',
+    opacity: 0
+  },500);
 
+  $(".colors").delay(400).animate({
+      // right: "+=30px",
+      margin: '+=23px',
+      height: '+=150px',
+      width: '+=150px'
+    },1500);
+    $('#level-title').fadeOut(1000, function()
+    {
+        $(this).html("Press A Key to Start").fadeIn(1000);
+    });
+
+});
+
+$(".colors").click(function() {
+  if(level > 0){
   var userChosenColour = $(this).attr("id");
   userClickedPattern.push(userChosenColour);
 
@@ -24,6 +51,7 @@ $(".btn").click(function() {
   animatePress(userChosenColour);
 
   checkAnswer(userClickedPattern.length-1);
+}
 });
 
 function checkAnswer(currentLevel) {
