@@ -33,28 +33,18 @@ body {
 
 .red {
   background-color: red;
-  /* position: absolute;
-  right: 31rem; */
 }
 
 .green {
   background-color: green;
-  /* position: absolute;
-  left: 31rem; */
 }
 
 .blue {
   background-color: blue;
-  /* position: absolute;
-  right:31rem;
-  bottom: .6rem; */
 }
 
 .yellow {
   background-color: yellow;
-  /* position: absolute;
-  left: 31rem;
-  bottom: .6rem; */
 }
 
 .pressed {
