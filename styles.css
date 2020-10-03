@@ -1,14 +1,23 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
 body {
   text-align: center;
   background-color: #013f22;
 }
 
+/*--------------------------------------------------------------
+# Title
+--------------------------------------------------------------*/
 .simon{
   color:#eac93b;
   font-size: 4.5vmax;
   font-family: 'Kaushan Script', cursive;
 }
 
+/*--------------------------------------------------------------
+# Insructions/level title
+--------------------------------------------------------------*/
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 1.5vmax;
@@ -16,6 +25,9 @@ body {
   color: #FEF2BF;
 }
 
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
 .container {
   display: block;
   width: 50%;
@@ -63,4 +75,3 @@ font-family: 'Quicksand', sans-serif;
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
-
