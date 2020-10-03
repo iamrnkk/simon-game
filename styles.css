@@ -5,14 +5,14 @@ body {
 
 .simon{
   color:#eac93b;
-  font-size: 5rem;
+  font-size: 4.5vmax;
   font-family: 'Kaushan Script', cursive;
 }
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
-  font-size: 2rem;
-  margin:  5%;
+  font-size: 1.5vmax;
+  margin:  5vmax;
   color: #FEF2BF;
 }
 
@@ -63,3 +63,4 @@ font-family: 'Quicksand', sans-serif;
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
+

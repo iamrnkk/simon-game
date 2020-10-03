@@ -10,7 +10,7 @@ var level = 0;
 $(document).keydown(function(e){
     if(e.which==32 ||e.which==13) e.preventDefault();
 });
-$(document).keypress(function() {
+$('#level-title').click(function() {
   if (!started) {
     $('#level-title').fadeOut(1000, function()
     {
@@ -29,15 +29,28 @@ $('.start').click(function() {
     opacity: 0
   },500);
 
+  if ($(window).width() >= 600) {
   $(".colors").delay(400).animate({
       // right: "+=30px",
       margin: '+=23px',
       height: '+=150px',
       width: '+=150px'
     },1500);
+    
+   }
+
+   if ($(window).width() < 600) {
+     $(".colors").delay(400).animate({
+      // right: "+=30px",
+      margin: '+=3px',
+      height: '+=35px',
+      width: '+=35px'
+    },1500);
+    }
+    
     $('#level-title').fadeOut(1000, function()
     {
-        $(this).html("Press A Key to Start").fadeIn(1000);
+        $(this).html("Click here to Start").fadeIn(1000);
     });
 
 });
@@ -65,7 +78,7 @@ function checkAnswer(currentLevel) {
     } else {
       playSound("wrong");
       $("body").addClass("game-over");
-      $("#level-title").text("Game Over, Press Any Key to Restart");
+      $("#level-title").text("Game Over, Click here to Restart");
 
       setTimeout(function () {
         $("body").removeClass("game-over");
